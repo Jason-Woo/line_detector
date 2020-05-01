@@ -64,7 +64,7 @@ class RGC_onCell:
         # option 1: -1,0,1,2
         is_stimulated = 0
         is_inhibited = 0
-        print(stimulate_mat[self.left_edge:self.right_edge+1,self.left_edge:self.right_edge+1])
+        # print(stimulate_mat[self.left_edge:self.right_edge+1,self.left_edge:self.right_edge+1])
         if 1 in stimulate_mat[self.left_edge:self.right_edge+1,self.left_edge:self.right_edge+1]:
             is_stimulated = 1
         stimulate_mat[self.left_edge:self.right_edge+1,self.left_edge:self.right_edge+1] = 0
@@ -79,7 +79,7 @@ class RGC_onCell:
             level = 2
         if is_stimulated == 1 and is_inhibited == 0:
             level = 3
-        print(level)
+        # print(level)
         firingRate, spikingNum = IzhiKevich(level)
         print("firingRate is " + str(firingRate))
         print("spikingNum is " + str(spikingNum))
@@ -102,7 +102,7 @@ class RGC_offCell:
         # option 1: -1,0,1,2
         is_stimulated = 0
         is_inhibited = 0
-        print(stimulate_mat[self.left_edge:self.right_edge+1,self.left_edge:self.right_edge+1])
+        # print(stimulate_mat[self.left_edge:self.right_edge+1,self.left_edge:self.right_edge+1])
         if -1 in stimulate_mat[self.left_edge:self.right_edge+1,self.left_edge:self.right_edge+1]:
             is_inhibited = 1
         stimulate_mat[self.left_edge:self.right_edge+1,self.left_edge:self.right_edge+1] = 0
@@ -117,7 +117,7 @@ class RGC_offCell:
             level = 2
         if is_stimulated == 1 and is_inhibited == 0:
             level = 3
-        print(level)
+        # print(level)
         firingRate, spikingNum = IzhiKevich(level)
         print("firingRate is " + str(firingRate))
         print("spikingNum is " + str(spikingNum))
